@@ -102,7 +102,7 @@
 !if %json_key_exists($AWS_CATEGORY_COLORS, $category)
 !return $AWS_CATEGORY_COLORS[$category]
 !else
-!return $AWS_BG_COLOR
+!return transparent
 !endif
 !endfunction
 
@@ -112,7 +112,7 @@
 
 <style>
   root {
-    BackgroundColor $AWS_BG_COLOR
+    BackgroundColor transparent
     FontColor $AWS_FG_COLOR
     LineColor $AWS_FG_COLOR
   }
@@ -136,17 +136,17 @@ skinparam wrapWidth 200
 skinparam maxMessageSize 150
 skinparam Shadowing false
 skinparam RoundCorner 0
-skinparam BackgroundColor $AWS_BG_COLOR
+skinparam BackgroundColor transparent
 
 !procedure $AWS_common_skinparam()
     FontColor $AWS_FG_COLOR
-    BackgroundColor $AWS_BG_COLOR
+    BackgroundColor transparent
     BorderColor $AWS_COLOR_GRAY
 !endprocedure
 
 !procedure $AWS_deployment_skinparam()
     FontColor $AWS_FG_COLOR
-    BackgroundColor $AWS_BG_COLOR
+    BackgroundColor transparent
     BorderColor $AWS_COLOR_GRAY
     BorderThickness 1.25
 !endprocedure
@@ -159,7 +159,7 @@ skinparam arrow {
 
 skinparam TitleFontColor $AWS_FG_COLOR
 skinparam TitleBorderColor transparent
-skinparam BackgroundColor $AWS_BG_COLOR
+skinparam BackgroundColor transparent
 
 ' Sequence Diagram
 skinparam participant {
@@ -171,11 +171,11 @@ skinparam participant {
 skinparam sequence {
     ArrowThickness 2
     LifeLineBorderColor $AWS_FG_COLOR
-    LifeLineBackgroundColor $AWS_BG_COLOR
+    LifeLineBackgroundColor transparent
     BoxFontColor $AWS_FG_COLOR
     BoxBorderColor $AWS_COLOR_GRAY
     BoxBorderThickness 1.25
-    BoxBackgroundColor $AWS_BG_COLOR
+    BoxBackgroundColor transparent
     GroupBorderColor $AWS_FG_COLOR
     GroupFontColor $AWS_FG_COLOR
     GroupBodyBackgroundColor transparent
@@ -192,7 +192,7 @@ skinparam note {
 skinparam activity {
   $AWS_common_skinparam()
   BorderThickness 2
-  StartColor $AWS_BG_COLOR
+  StartColor transparent
   EndColor $AWS_FG_COLOR
   BarColor $AWS_FG_COLOR
 }
@@ -202,11 +202,11 @@ skinparam swimlane {
 }
 
 ' Deployment Diagram
-skinparam actor { 
+skinparam actor {
     $AWS_deployment_skinparam()
     'StereotypeFontColor  $AWS_FG_COLOR
 }
-skinparam agent { 
+skinparam agent {
     $AWS_deployment_skinparam()
     Padding 2
 }
@@ -228,13 +228,13 @@ skinparam cloud {
 skinparam collections {
     $AWS_deployment_skinparam()
 }
-skinparam component { 
+skinparam component {
     $AWS_deployment_skinparam()
 }
 skinparam control {
     $AWS_deployment_skinparam()
 }
-skinparam database { 
+skinparam database {
     $AWS_deployment_skinparam()
 }
 skinparam entity {
@@ -261,10 +261,10 @@ skinparam label {
 skinparam node {
     $AWS_deployment_skinparam()
 }
-skinparam package { 
+skinparam package {
     $AWS_deployment_skinparam()
 }
-skinparam person { 
+skinparam person {
     $AWS_deployment_skinparam()
 }
 skinparam queue {
@@ -281,7 +281,7 @@ skinparam stack {
 skinparam storage {
     $AWS_deployment_skinparam()
 }
-skinparam usecase { 
+skinparam usecase {
     $AWS_deployment_skinparam()
 }
 
@@ -376,7 +376,7 @@ participant "p_label\n$AWSImg(p_sprite)\n<size:TECHN_FONT_SIZE>[p_techn]</size>\
   skinparam rectangle<<$stereo>> {
     StereotypeFontSize 0
     FontColor  $AWS_FG_COLOR
-    BackgroundColor $AWS_BG_COLOR
+    BackgroundColor transparent
     BorderColor $border_color
     BorderStyle $border_style
     Shadowing false
