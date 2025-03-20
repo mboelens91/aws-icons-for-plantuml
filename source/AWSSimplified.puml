@@ -12,7 +12,7 @@ skinparam rectangle<<e_stereo>> {
     BorderColor transparent
     Shadowing false
 }
-skinparam ParticipantBackgroundColor<<e_stereo>> $AWS_BG_COLOR
+skinparam ParticipantBackgroundColor<<e_stereo>> transparent
 skinparam SequenceParticipantBorderThickness<<e_stereo>> 0
 !enddefinelong
 
